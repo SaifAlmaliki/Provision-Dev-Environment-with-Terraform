@@ -110,6 +110,7 @@ resource "azurerm_linux_virtual_machine" "mtc-vm" {
   admin_username        = "adminuser"
   network_interface_ids = [azurerm_network_interface.mtc-nic.id]
 
+  # Provision Ubuntu vm with custom code (Install docker)
   custom_data = filebase64("customdata.tpl")
 
   admin_ssh_key {
