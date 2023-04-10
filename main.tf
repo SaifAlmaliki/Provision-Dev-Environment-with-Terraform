@@ -143,7 +143,7 @@ resource "azurerm_linux_virtual_machine" "mtc-vm" {
 }
 
 # (Data Source) Query the IP address
-# 'data' not a resource, so doesn't need to apply but to refresh 
+# 'data' not a resource, so doesn't need to apply but to refresh
 data "azurerm_public_ip" "mtc-ip-data" {
   name                = azurerm_public_ip.mtc-ip.name
   resource_group_name = azurerm_resource_group.mtc-rg.name
